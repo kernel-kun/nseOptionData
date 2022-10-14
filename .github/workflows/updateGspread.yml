@@ -1,7 +1,7 @@
 name: Update Google Sheets
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
   schedule:
     - cron: '*/6 * * * *' # `*/10 14-22 * * 1-5` runs at every 10th minute past every hour from 8:30 through 4:30 IST on every day-of-week from Monday through Friday
     # Note: 8:30 to 4:30 in IST is 14-22 for UTC
