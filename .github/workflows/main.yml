@@ -3,7 +3,7 @@ name: Update Google Sheets
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/9 3-11 * * *'
+    - cron: '*/7 3-11 * * *'
     # `*/10 3-11 * * 1-5` runs at every 10th minute past every hour from 8:30 through 4:30 IST on every day-of-week from Monday through Friday
     # Note: 8:30 to 4:30 in IST is 3-11 for UTC
 
@@ -25,7 +25,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Execute Python script
         env:
-          CRED: ${{ secrets.SERVICE_ACCOUNT_T }}
+          CRED: ${{ secrets.SERVICE_ACCOUNT }}
           WB: ${{ secrets.WORKBOOK_NAME }}
           WKS: ${{ secrets.WORKSHEET_NAME }}
         run: python main_g.py
