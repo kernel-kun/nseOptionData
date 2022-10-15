@@ -85,7 +85,7 @@ try:
 
             try:
                 # Establish the connection
-                wb = gc.open("Plutonium Global - Testing")      # wb  - workbook
+                wb = gc.open(os.environ["WB"])      # wb  - workbook
 
                 #----------- gspread Functions -----------#
                 # 1. Print list all available Worksheets
@@ -93,7 +93,7 @@ try:
                     print(wb.worksheets())
 
                 # 2. Select a Worksheet
-                wks = wb.worksheet("Option Data")     # wks - worksheet
+                wks = wb.worksheet(os.environ["WKS"])     # wks - worksheet
 
                 # 3. Get current Worksheet URL
                 def currWorksheetURL():

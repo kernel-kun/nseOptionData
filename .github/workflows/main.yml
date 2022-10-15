@@ -26,4 +26,6 @@ jobs:
       - name: Execute Python script
         env:
           CRED: ${{ secrets.SERVICE_ACCOUNT_T }}
+          WB: ${{ secrets.WORKBOOK_NAME }}
+          WKS: ${{ secrets.WORKSHEET_NAME }}
         run: python main_g.py
